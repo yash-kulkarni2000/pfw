@@ -16,6 +16,7 @@ body {
     position: relative;
     text-align: center;
     overflow: hidden;
+    padding: 20px; /* Adds padding to avoid overflow */
 }
 
 .container {
@@ -23,9 +24,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Make sure container stays above stars */
+    z-index: 1;
     position: relative;
     text-align: center;
+    max-width: 90%; /* Prevent overflow by limiting width */
+    margin: 0 auto; /* Center the container */
 }
 
 .title {
@@ -217,12 +220,14 @@ body {
 }
 
 .about-text {
-    font-size: 1.2rem;
-    color: #fff; /* Keep the text white */
+    font-size: 0.8 rem;
+    color: #fff;
     margin: 20px 0;
-    line-height: 1.6; /* Improve readability with spacing between lines */
-    max-width: 600px; /* Limit the width to make it readable */
+    line-height: 1.6;
+    max-width: 600px; 
     text-align: center;
+    padding: 5 px;
+    border-radius: 10px;
 }
 
 @keyframes twinkle {
