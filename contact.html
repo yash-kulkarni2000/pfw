@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yash's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="moon"></div>
+    <div class="clouds"></div>
+    <div class="clouds-reverse"></div>
+    <div class="stars"></div>
+
+    <div class="container">
+        <h1 class="title">Contact Me</h1>
+        
+        <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+        <button class="back-home-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
