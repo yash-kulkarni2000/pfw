@@ -56,6 +56,65 @@ body {
     color: #00ff00;
 }
 
+/* Moon Styling */
+.moon {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0 #f8f8f8, -5px -5px 0 #ccc; /* Add some pixelation effect */
+    z-index: 0;
+}
+
+/* Cloud Styling */
+.clouds {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border-radius: 40px;
+    top: 100px;
+    left: -200px;
+    z-index: 0;
+    animation: floatClouds 40s linear infinite; /* Clouds move slowly across the screen */
+}
+
+/* Create pixelated effect for clouds using box-shadow */
+.clouds::before,
+.clouds::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.clouds::before {
+    width: 150px;
+    height: 50px;
+    top: -30px;
+    left: 50px;
+}
+
+.clouds::after {
+    width: 120px;
+    height: 40px;
+    top: 10px;
+    left: 100px;
+}
+
+/* Cloud Movement */
+@keyframes floatClouds {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
 /* Starfield Animation */
 .stars {
     position: absolute;
