@@ -443,6 +443,18 @@ body {
         font-size: 0.9rem;
     }
 
+    .tabs {
+        flex-direction: column; /* Stack the tabs vertically */
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .tab-button {
+        width: 90%; /* Make buttons take up full width */
+        margin: 10px 0; /* Add spacing between buttons */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
     .back-home-button {
         padding: 8px 16px;
         font-size: 0.8rem;
@@ -462,6 +474,12 @@ body {
     .job-description,
     .resume-skills li {
         font-size: 0.8rem;
+    }
+
+    .tab-button {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 90%; /* Ensure full width for smaller screens */
     }
 
     .back-home-button {
@@ -632,7 +650,7 @@ input:focus, textarea:focus {
     .clouds, .clouds-reverse {
         width: 150px; /* Reduce cloud size on mobile */
         height: 45px;
-        animation-duration: 30s;
+        animation-duration: 25s;
         animation-delay: -4s;
     }
 
