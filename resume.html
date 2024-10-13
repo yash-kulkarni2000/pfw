@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Yash's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="moon"></div>
+    <div class="clouds"></div> 
+    <div class="clouds-reverse"></div>
+    <div class="stars"></div>
+
+    <div class="container">
+        <h1 class="title">My Resume</h1>
+
+        <!-- Tabs for Resume Sections -->
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('summary')">Summary</button>
+            <button class="tab-button" onclick="openTab('skills')">Skills</button>
+            <button class="tab-button" onclick="openTab('experience')">Experience</button>
+            <button class="tab-button" onclick="openTab('education')">Education</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="summary" class="tab-content">
+            <h2 class="resume-heading">Summary</h2>
+            <p class="resume-description">
+                Passionate software engineer with expertise in web development using React, Flask, and PostgreSQL. Adept at creating full-stack applications and improving performance through optimization.
+            </p>
+        </div>
+
+        <div id="skills" class="tab-content">
+            <h2 class="resume-heading">Skills</h2>
+            <ul class="resume-skills">
+                <li>HTML, CSS, JavaScript</li>
+                <li>React.js, Flask, Node.js</li>
+                <li>PostgreSQL, MongoDB</li>
+                <li>Python, Machine Learning</li>
+                <li>AWS, Docker, Git</li>
+            </ul>
+        </div>
+
+        <div id="experience" class="tab-content">
+            <h2 class="resume-heading">Experience</h2>
+            <div class="resume-job">
+                <h3>Software Engineer Intern</h3>
+                <p class="job-description">Cvent, Tysons, VA — June 2024 - August 2024</p>
+                <ul>
+                    <li>Developed a penetration testing tool using React.js and Flask.</li>
+                    <li>Integrated AI Writing Assistant for customer-facing reports.</li>
+                    <li>Improved tool efficiency by optimizing PostgreSQL queries.</li>
+                </ul>
+            </div>
+            <div class="resume-job">
+                <h3>Software Engineer</h3>
+                <p class="job-description">Plural Technology Pvt. Ltd., Pune, India — July 2022 - June 2023</p>
+                <ul>
+                    <li>Developed data engineering pipelines for ingesting millions of records into ArangoDB.</li>
+                    <li>Used Python and SQL to perform data analysis for process improvements.</li>
+                    <li>Managed database deployment on RedHat OpenShift.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="education" class="tab-content">
+            <h2 class="resume-heading">Education</h2>
+            <p class="resume-description">
+                <strong>Master of Science in Computer Science</strong><br>
+                Virginia Tech, Blacksburg, VA — Expected Graduation: May 2025
+            </p>
+        </div>
+
+        <button class="back-home-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

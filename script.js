@@ -20,3 +20,31 @@ const startText = document.querySelector('.start-text');
 startText.addEventListener('click', () => {
     startText.style.animation = 'none'; // Stop the blinking when "Press Start" is clicked
 });
+
+
+// Function to open a specific tab
+function openTab(tabName) {
+    var i, tabcontent, tabbuttons;
+    tabcontent = document.getElementsByClassName("tab-content");
+    tabbuttons = document.getElementsByClassName("tab-button");
+    
+    // Hide all tab content
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    // Remove the active class from all buttons
+    for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+    }
+    
+    // Show the specific tab and make the button active
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
+}
+
+// Set the default tab to open
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("summary").style.display = "block";
+    document.querySelector(".tab-button").classList.add("active");
+});

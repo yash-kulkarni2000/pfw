@@ -61,7 +61,6 @@ body {
     color: #fff;
 }
 
-
 .menu-item {
     margin: 10px 0;
     cursor: pointer;
@@ -72,7 +71,6 @@ body {
 .menu-item:hover {
     color: #00ff00; /* Hover color */
 }
-
 
 /* Moon Styling */
 .moon {
@@ -98,7 +96,7 @@ body {
     left: -200px;
     z-index: 0;
     animation: floatClouds 60s linear infinite;
-    animation-delay: -3s; /* Start the second cloud earlier by 1 second */
+    animation-delay: -5s; /* Start the second cloud earlier by 1 second */
     opacity: 0.7; /* Reduce cloud opacity */
 }
 
@@ -146,7 +144,7 @@ body {
     right: -200px;
     z-index: -1;
     animation: floatCloudsReverse 80s linear infinite; /* Slower animation for variety */
-    animation-delay: -2s; /* Start the second cloud earlier by 1 second */
+    animation-delay: -4s; /* Start the second cloud earlier by 1 second */
     opacity: 0.7; /* Reduce cloud opacity */
 }
 
@@ -250,7 +248,7 @@ body {
     }
 }
 
-
+/* Back to Home Button */
 .back-home-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -267,4 +265,231 @@ body {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px; /* Spacing between project items */
+    justify-items: center; /* Center align the grid items */
+    margin-top: 40px;
+    padding: 0 20px; /* Padding around the grid for spacing */
+}
+
+.project-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border: 2px solid #00ff00; /* Retro green border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Ensure each item takes up 100% of its grid column */
+    max-width: 350px; /* Limit width for each project card */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: #00ff00; /* Bright green title */
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.9rem; /* Smaller font for description */
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: #ffcc00; /* Retro yellow link */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.project-link:hover {
+    color: #00ff00; /* Hover effect to green */
+}
+
+/* Resume Content Layout */
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Ensure content doesn't stretch too wide */
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff00; /* Retro green border */
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-heading {
+    color: #00ff00; /* Bright green headings */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.resume-description {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.resume-skills {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-skills li {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.resume-job {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.job-description {
+    color: #ffcc00; /* Retro yellow job description */
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.download-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00ff00; /* Retro green */
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-button:hover {
+    background-color: #ffcc00; /* Hover to yellow */
+    transform: scale(1.1); /* Slight zoom */
+}
+
+/* Tabs Styling */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-button.active {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.tab-button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.tab-content {
+    display: none;
+    max-width: 800px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff00;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #00ff00;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #777;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffcc00; /* Change color when focused */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00ff00;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #ffcc00; /* Change to yellow on hover */
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Contact Form */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 0.9rem;
+    }
+}
 
