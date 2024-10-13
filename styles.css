@@ -413,6 +413,63 @@ body {
     font-size: 1rem;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .resume-content {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .resume-heading {
+        font-size: 1.2rem;
+    }
+
+    .resume-description,
+    .job-description,
+    .resume-skills li {
+        font-size: 0.9rem;
+    }
+
+    .back-home-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .resume-heading {
+        font-size: 1rem;
+    }
+
+    .resume-description,
+    .job-description,
+    .resume-skills li {
+        font-size: 0.8rem;
+    }
+
+    .back-home-button {
+        padding: 6px 14px;
+        font-size: 0.7rem;
+    }
+}
+
 .download-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -575,6 +632,7 @@ input:focus, textarea:focus {
     .clouds, .clouds-reverse {
         width: 150px; /* Reduce cloud size on mobile */
         height: 45px;
+        animation-duration: 30s;
         animation-delay: -4s;
     }
 
