@@ -6,27 +6,39 @@
 }
 
 body {
-    background: linear-gradient(180deg, #1a1a66, #333399, #4d4db2, #6666ff);
+    background: linear-gradient(180deg, #0b0b40 0%, #1a1a66 50%, #2b2b85 100%);
     color: #fff;
     font-family: 'Press Start 2P', cursive;
-    overflow: hidden; /* Prevents scrollbars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 1; /* Make sure container stays above stars */
     position: relative;
+    text-align: center;
 }
 
 .title {
-    font-size: 32px;
+    font-size: 2.5rem; /* Adjusted font size for better proportions */
     color: #00ff00;
     margin-bottom: 20px;
 }
 
 .start-text {
     color: #ff0;
-    font-size: 16px;
+    font-size: 1.2rem; /* Adjusted font size */
+    margin-top: 20px;
+    margin-bottom: 30px;
     animation: blink 1s steps(2, start) infinite;
 }
 
@@ -35,37 +47,43 @@ body {
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
-    image-rendering: pixelated;
+    width: 150px; /* Increased size for better visibility */
+    height: 150px;
+    border: 5px solid #00ff00; /* Retro pixelated border */
+    border-radius: 10px; /* Slightly rounded corners to give it a unique look */
+    image-rendering: pixelated; /* Ensure the pixelated look */
+    background-color: #000; /* Add background color for a better contrast */
 }
 
 .menu {
     list-style-type: none;
-    font-size: 18px;
+    font-size: 1.5rem; /* Adjusted font size */
     color: #fff;
 }
+
 
 .menu-item {
     margin: 10px 0;
     cursor: pointer;
+    color: #fff; /* Default color for all menu items */
     transition: color 0.3s;
 }
 
 .menu-item:hover {
-    color: #00ff00;
+    color: #00ff00; /* Hover color */
 }
+
 
 /* Moon Styling */
 .moon {
     position: absolute;
     top: 50px;
-    left: 50px;
-    width: 100px;
-    height: 100px;
+    right: 50px;
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
     background: #fff;
-    border-radius: 50%;
-    box-shadow: 5px 5px 0 #f8f8f8, -5px -5px 0 #ccc; /* Add some pixelation effect */
+    border-radius: 50%; /* Ensures the moon stays circular */
+    box-shadow: 6px 6px 0 #f8f8f8, -6px -6px 0 #ccc; /* Slightly bigger shadow to match size */
     z-index: 0;
 }
 
@@ -76,19 +94,21 @@ body {
     height: 60px;
     background: #fff;
     border-radius: 40px;
-    top: 100px;
+    top: 120px;
     left: -200px;
     z-index: 0;
-    animation: floatClouds 40s linear infinite; /* Clouds move slowly across the screen */
+    animation: floatClouds 60s linear infinite;
+    animation-delay: -3s; /* Start the second cloud earlier by 1 second */
+    opacity: 0.7; /* Reduce cloud opacity */
 }
 
-/* Create pixelated effect for clouds using box-shadow */
 .clouds::before,
 .clouds::after {
     content: '';
     position: absolute;
     background: #fff;
     border-radius: 40px;
+    
 }
 
 .clouds::before {
@@ -105,13 +125,60 @@ body {
     left: 100px;
 }
 
-/* Cloud Movement */
+/* Cloud Movement (left to right) */
 @keyframes floatClouds {
     0% {
         left: -300px;
     }
     100% {
-        left: 100%;
+        left: 100vw; /* Keep within viewport */
+    }
+}
+
+/* Second Cloud Styling (right to left) */
+.clouds-reverse {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border-radius: 40px;
+    top: 180px; /* Adjust position for the second cloud */
+    right: -200px;
+    z-index: -1;
+    animation: floatCloudsReverse 80s linear infinite; /* Slower animation for variety */
+    animation-delay: -2s; /* Start the second cloud earlier by 1 second */
+    opacity: 0.7; /* Reduce cloud opacity */
+}
+
+.clouds-reverse::before,
+.clouds-reverse::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.clouds-reverse::before {
+    width: 150px;
+    height: 50px;
+    top: -30px;
+    left: 50px;
+}
+
+.clouds-reverse::after {
+    width: 120px;
+    height: 40px;
+    top: 10px;
+    left: 100px;
+}
+
+/* Cloud Movement (right to left) */
+@keyframes floatCloudsReverse {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 100vw; /* Keep within viewport */
     }
 }
 
@@ -124,7 +191,7 @@ body {
     height: 100%;
     background: transparent;
     z-index: 0;
-    animation: moveStars 30s linear infinite; /* Stars move slowly */
+    animation: moveStars 30s linear infinite;
 }
 
 @keyframes moveStars {
@@ -132,34 +199,72 @@ body {
         background-position: 0 0;
     }
     100% {
-        background-position: 1000px 1000px; /* Stars move diagonally */
+        background-position: 1000px 1000px;
     }
 }
 
-/* Generate random stars using box-shadow */
 .stars::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 1px;
-    height: 1px;
+    width: 3px;  
+    height: 3px; 
     background: white;
     box-shadow: 
-        50px 100px, 150px 200px, 250px 300px, 400px 500px, 
+        50px 100px, 150px 200px, 250px 300px, 400px 500px,
         600px 120px, 300px 800px, 700px 100px, 900px 350px, 
         150px 400px, 800px 600px, 50px 600px, 200px 900px;
     animation: twinkle 2s infinite alternate;
 }
 
+.about-text {
+    font-size: 1.2rem;
+    color: #fff; /* Keep the text white */
+    margin: 20px 0;
+    line-height: 1.6; /* Improve readability with spacing between lines */
+    max-width: 600px; /* Limit the width to make it readable */
+    text-align: center;
+}
+
 @keyframes twinkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* Blinking effect for "Press Start" */
 @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
+
+.back-home-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #00ff00; /* Retro green */
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-home-button:hover {
+    background-color: #ffcc00; /* Change to yellow on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
