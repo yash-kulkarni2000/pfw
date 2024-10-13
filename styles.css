@@ -268,3 +268,54 @@ body {
 }
 
 
+/* Mobile styles for screens 768px and below */
+@media (max-width: 768px) {
+    body {
+        padding: 20px; /* Add padding for smaller screens */
+        height: auto; /* Allow the page to expand vertically */
+    }
+
+    .container {
+        margin-top: 20px; /* Add space from the top */
+    }
+
+    .title {
+        font-size: 1.8rem; /* Smaller font size for the title on mobile */
+    }
+
+    .start-text, .about-text {
+        font-size: 1rem; /* Decrease font size for better readability */
+    }
+
+    .avatar {
+        width: 100px; /* Smaller avatar for mobile */
+        height: 100px;
+    }
+
+    .menu-item {
+        font-size: 1.2rem; /* Smaller font size for menu items */
+        margin: 8px 0; /* Adjust margin to fit smaller screens */
+    }
+
+    .moon {
+        width: 80px; /* Adjust moon size */
+        height: 80px;
+        top: 20px; /* Adjust moon position for mobile */
+        right: 20px;
+    }
+
+    .clouds, .clouds-reverse {
+        width: 150px; /* Smaller clouds for mobile */
+        height: 50px;
+        opacity: 0.5; /* Make clouds more subtle on smaller screens */
+    }
+
+    .back-home-button {
+        padding: 8px 15px; /* Adjust button size for mobile */
+        font-size: 0.9rem; /* Decrease font size */
+    }
+
+    .about-text {
+        max-width: 90%; /* Ensure text takes up more width on mobile */
+    }
+}
