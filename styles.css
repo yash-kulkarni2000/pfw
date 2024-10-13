@@ -516,15 +516,14 @@ input:focus, textarea:focus {
     }
 
     .about-text {
-        font-size: 0.5rem;
-        color: #000;
+        font-size: 0.5 rem;
         line-height: 1.4;
         padding: 10px;
         max-width: 90%;
     }
 
     .back-home-button {
-        padding: 10px 20px;
+        padding: 10px 15px;
         font-size: 0.8rem;
     }
 
@@ -545,7 +544,7 @@ input:focus, textarea:focus {
     }
 
     .about-text {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         padding: 10px;
     }
 
