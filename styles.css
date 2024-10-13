@@ -626,8 +626,6 @@ input:focus, textarea:focus {
 
     body {
         padding: 0;
-        overflow-y: auto;
-        height: auto;
     }
 
     .container {
