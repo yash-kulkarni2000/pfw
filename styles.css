@@ -7,6 +7,11 @@
 
 body {
     background-color: #000;
+    background-image: url('background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated; 
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     display: flex;
@@ -15,6 +20,7 @@ body {
     height: 100vh;
     flex-direction: column;
 }
+
 
 .container {
     text-align: center;
