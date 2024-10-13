@@ -501,6 +501,16 @@ input:focus, textarea:focus {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .title {
         font-size: 2rem; /* Reduce title size */
     }
