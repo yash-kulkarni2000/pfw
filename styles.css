@@ -6,12 +6,7 @@
 }
 
 body {
-    background-color: #000;
-    background-image: url('background.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    image-rendering: pixelated; 
+    background: linear-gradient(180deg, #0d0d3c, #1a1a66, #333399, #4d4db2);
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     display: flex;
@@ -62,6 +57,20 @@ body {
 
 .menu-item:hover {
     color: #00ff00;
+}
+
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 50px 100px, 150px 200px, 200px 250px, 400px 50px, 600px 120px; /* Place stars at random locations */
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 /* Blinking effect for "Press Start" */
