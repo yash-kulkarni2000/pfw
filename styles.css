@@ -98,7 +98,7 @@ body {
     top: 120px;
     left: -200px;
     z-index: 0;
-    animation: floatClouds 60s linear infinite;
+    animation: floatClouds 50s linear infinite;
     animation-delay: -5s; /* Start the second cloud earlier by 1 second */
     opacity: 0.7; /* Reduce cloud opacity */
 }
@@ -146,7 +146,7 @@ body {
     top: 180px; /* Adjust position for the second cloud */
     right: -200px;
     z-index: -1;
-    animation: floatCloudsReverse 80s linear infinite; /* Slower animation for variety */
+    animation: floatCloudsReverse 60s linear infinite; /* Slower animation for variety */
     animation-delay: -4s; /* Start the second cloud earlier by 1 second */
     opacity: 0.7; /* Reduce cloud opacity */
 }
@@ -228,6 +228,8 @@ body {
     text-align: center;
     padding: 5 px;
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ff00;
 }
 
 @keyframes twinkle {
@@ -624,6 +626,8 @@ input:focus, textarea:focus {
 
     body {
         padding: 0;
+        overflow-y: auto;
+        height: auto;
     }
 
     .container {
