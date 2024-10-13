@@ -517,6 +517,7 @@ input:focus, textarea:focus {
 
     .about-text {
         font-size: 0.5rem;
+        color: #000;
         line-height: 1.4;
         padding: 10px;
         max-width: 90%;
