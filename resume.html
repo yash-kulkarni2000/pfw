@@ -18,10 +18,10 @@
 
         <!-- Tabs for Resume Sections -->
         <div class="tabs">
-            <button class="tab-button" onclick="openTab('summary')">Summary</button>
             <button class="tab-button" onclick="openTab('skills')">Skills</button>
             <button class="tab-button" onclick="openTab('experience')">Experience</button>
             <button class="tab-button" onclick="openTab('education')">Education</button>
+            <button class="tab-button" onclick="openTab('summary')">View Resume</button>
         </div>
 
         <!-- Tab Content -->
@@ -35,43 +35,78 @@
         <div id="skills" class="tab-content">
             <h2 class="resume-heading">Skills</h2>
             <ul class="resume-skills">
-                <li>HTML, CSS, JavaScript</li>
-                <li>React.js, Flask, Node.js</li>
-                <li>PostgreSQL, MongoDB</li>
-                <li>Python, Machine Learning</li>
-                <li>AWS, Docker, Git</li>
+                <p class="job-description" style="text-align: left;">Languages & Database: </p><br>
+                <li style="text-align: left;">Python, Java, C++, JavaScript, TypeScript, React.js, Flask, PostgreSQL, MongoDB</li><br>
+                <p class="job-description" style="text-align: left;">Software & Tools: </p><br>
+                <li style="text-align: left;">Git, Docker, RedHat OpenShift, Linux, Excel</li>
             </ul>
         </div>
 
         <div id="experience" class="tab-content">
             <h2 class="resume-heading">Experience</h2>
-            <div class="resume-job">
-                <h3>Software Engineer Intern</h3>
-                <p class="job-description">Cvent, Tysons, VA — June 2024 - August 2024</p>
+            
+            <!-- Toggle buttons for experience -->
+            <div class="experience-toggle">
+                <button class="toggle-button active" onclick="toggleExperience('exp1')">Cvent</button>
+                <button class="toggle-button" onclick="toggleExperience('exp2')">Plural Technology Pvt. Ltd.</button>
+            </div>
+
+            <!-- Experience 1 -->
+            <div id="exp1" class="experience-item active">
+                <h3>Software Engineer Intern</h3><br>
+                <p class="job-description" style="text-align: left;">From: June 2024 To: August 2024</p>
+                <p class="job-description" style="text-align: left;">Location: Tysons, VA</p><br>
                 <ul>
-                    <li>Developed a penetration testing tool using React.js and Flask.</li>
-                    <li>Integrated AI Writing Assistant for customer-facing reports.</li>
-                    <li>Improved tool efficiency by optimizing PostgreSQL queries.</li>
+                    <li style="text-align: left;">Developed a penetration testing tool using React.js and Flask.</li><br>
+                    <li style="text-align: left;">Integrated AI Writing Assistant for customer-facing reports.</li><br>
+                    <li style="text-align: left;">Improved tool efficiency by optimizing PostgreSQL queries.</li><br>
                 </ul>
             </div>
-            <div class="resume-job">
-                <h3>Software Engineer</h3>
-                <p class="job-description">Plural Technology Pvt. Ltd., Pune, India — July 2022 - June 2023</p>
+
+            <!-- Experience 2 -->
+            <div id="exp2" class="experience-item" style="display: none;">
+                <h3>Software Engineer</h3><br>
+                <p class="job-description" style="text-align: left;">From: July 2022 To: June 2023</p>
+                <p class="job-description" style="text-align: left;">Location: Pune, India</p><br>
                 <ul>
-                    <li>Developed data engineering pipelines for ingesting millions of records into ArangoDB.</li>
-                    <li>Used Python and SQL to perform data analysis for process improvements.</li>
-                    <li>Managed database deployment on RedHat OpenShift.</li>
+                    <li style="text-align: left;">Developed data engineering pipelines for ingesting millions of records into ArangoDB.</li><br>
+                    <li style="text-align: left;">Used Python and SQL to perform data analysis for process improvements.</li><br>
+                    <li style="text-align: left;">Managed database deployment on RedHat OpenShift.</li><br>
                 </ul>
             </div>
         </div>
 
         <div id="education" class="tab-content">
             <h2 class="resume-heading">Education</h2>
-            <p class="resume-description">
-                <strong>Master of Science in Computer Science</strong><br>
-                Virginia Tech, Blacksburg, VA — Expected Graduation: May 2025
-            </p>
+        
+            <!-- Toggle buttons for each education level -->
+            <div class="education-toggle">
+                <button class="education-button active" onclick="toggleEducation('masters')">Master's</button>
+                <button class="education-button" onclick="toggleEducation('undergrad')">Bachelor's</button>
+            </div>
+        
+            <!-- Master's education details, visible by default -->
+            <div id="masters" class="education-content active">
+                <p class="resume-description">
+                    <p class="job-description" style="text-align: left;">Virginia Tech, Blacksburg, VA</p><br>
+                    <p style="text-align: left;">Master of Science in Computer Science</p><br>
+                    <p style="text-align: left;">Graduation: May 2025</p><br>
+                    <p style="text-align: left;">Coursework: Machine Learning - 1, Software Engineering, Cloud Computing, Social Media Analytics, Urban Computing, Information Visualization</p>
+                </p>
+            </div>
+        
+            <!-- Undergraduate education details, hidden by default -->
+            <div id="undergrad" class="education-content" style="display:none;">
+                <p class="resume-description">
+                    <p class="job-description" style="text-align: left;">MIT University, Pune, India</p><br>
+                    <p style="text-align: left;">Bachelor of Technology in Computer Science</p><br>
+                    <p style="text-align: left;">Graduation: June 2022</p><br>
+                    <p style="text-align: left;">Coursework: Software Engineering, Data Analytics, Object Oriented Programming, Operating Systems, Web Development</p>
+                </p>
+            </div>
         </div>
+        
+        
 
         <button class="back-home-button" onclick="window.location.href='index.html'">Back to Home</button>
     </div>

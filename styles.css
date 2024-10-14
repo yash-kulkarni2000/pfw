@@ -404,10 +404,20 @@ body {
     margin-bottom: 5px;
 }
 
-.resume-job {
+/* Align the text of the bullet points to the left */
+.resume-job ul {
     text-align: left;
-    margin-bottom: 15px;
+    margin-left: 20px; /* Adds some space before the bullets */
+    list-style-position: inside; /* Ensures the bullet is inside the text block */
 }
+
+/* Optional: Adjusting font size for better readability */
+.resume-job ul li {
+    font-size: 1rem; /* Slightly adjust the font size if needed */
+    margin-bottom: 10px; /* Adds space between each bullet point */
+    color: #fff; /* Ensures text remains white */
+}
+
 
 .job-description {
     color: #ffcc00; /* Retro yellow job description */
@@ -688,5 +698,70 @@ input:focus, textarea:focus {
     }
 }
 
+.experience-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-button.active {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.toggle-button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.experience-item {
+    display: none;
+}
+
+.experience-item.active {
+    display: block;
+}
+
+/* Education toggle buttons */
+.education-toggle {
+    margin-bottom: 20px;
+}
+
+.education-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.education-button.active {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.education-button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+/* Education content styling */
+.education-content {
+    display: none;
+}
 
 
