@@ -80,13 +80,73 @@ body {
     position: absolute;
     top: 50px;
     right: 50px;
-    width: 120px; /* Increased size */
-    height: 120px; /* Increased size */
-    background: #fff;
+    width: 150px; /* Increased size */
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #f0f0f0, #ccc); /* Gradient for moon texture */
     border-radius: 50%; /* Ensures the moon stays circular */
-    box-shadow: 6px 6px 0 #f8f8f8, -6px -6px 0 #ccc; /* Slightly bigger shadow to match size */
-    z-index: 0;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Adds depth */
+    z-index: -2;
+    overflow: hidden;
 }
+
+/* Craters */
+.moon::before, .moon::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #bbb, #888); /* Crater shading */
+}
+
+.moon::before {
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    left: 20px;
+}
+
+.moon::after {
+    width: 25px;
+    height: 25px;
+    top: 100px;
+    left: 80px;
+}
+
+/* Small craters */
+.moon .small-crater {
+    position: absolute;
+    background: radial-gradient(circle, #ddd, #999); /* Small craters shading */
+    border-radius: 50%;
+}
+
+.moon .small-crater:nth-child(1) {
+    width: 15px;
+    height: 15px;
+    top: 20px;
+    left: 90px;
+}
+
+.moon .small-crater:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    top: 70px;
+    left: 40px;
+}
+
+.moon .small-crater:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    top: 110px;
+    left: 20px;
+}
+
+.moon .small-crater:nth-child(4) {
+    width: 12px;
+    height: 12px;
+    top: 60px;
+    left: 120px;
+}
+
+
 
 /* Cloud Styling */
 .clouds {
