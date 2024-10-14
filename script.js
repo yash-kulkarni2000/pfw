@@ -44,7 +44,7 @@ function openTab(tabName) {
 
 // Set the default tab to open
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("summary").style.display = "block";
+    document.getElementById("skills").style.display = "block";
     document.querySelector(".tab-button").classList.add("active");
 });
 
