@@ -735,6 +735,8 @@ input:focus, textarea:focus {
 
 /* Education toggle buttons */
 .education-toggle {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
