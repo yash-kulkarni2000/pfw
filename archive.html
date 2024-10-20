@@ -127,6 +127,45 @@ img {
   background-color: #ffcc00; /* Change to yellow on hover */
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem; /* Adjust title for smaller screens */
+  }
+
+  .slideshow-container {
+    max-width: 100%; /* Ensure slideshow takes full width on smaller screens */
+  }
+
+  .prev, .next {
+    font-size: 14px; /* Adjust button size for smaller screens */
+    padding: 8px;
+  }
+
+  .text {
+    font-size: 0.8rem; /* Smaller caption text */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem; /* Further reduce title size */
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .prev, .next {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .text {
+    font-size: 0.7rem; /* Even smaller caption for very small screens */
+  }
+}
+
 </style>
 </head>
 <body>
