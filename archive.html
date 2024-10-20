@@ -129,42 +129,77 @@ img {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 10px; /* Add some breathing space on smaller screens */
+  }
+
   .title {
-    font-size: 2rem; /* Adjust title for smaller screens */
+    font-size: 1.8rem; /* Adjust the font size */
   }
 
   .slideshow-container {
-    max-width: 100%; /* Ensure slideshow takes full width on smaller screens */
+    max-width: 90%; /* Ensure the slider takes up most of the width on mobile */
+  }
+
+  .mySlides img {
+    max-height: 300px; /* Limit the height of the images on mobile */
   }
 
   .prev, .next {
-    font-size: 14px; /* Adjust button size for smaller screens */
-    padding: 8px;
+    font-size: 12px; /* Reduce the size of the navigation arrows */
+    padding: 5px; /* Smaller padding for the arrows */
+    margin-top: -20px; /* Adjust to keep arrows aligned */
   }
 
   .text {
-    font-size: 0.8rem; /* Smaller caption text */
+    font-size: 0.8rem; /* Smaller caption font for better readability */
+    margin-top: 5px; /* Adjust the caption position */
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px; /* Smaller dots for mobile */
+  }
+
+  .back-home-button {
+    font-size: 1rem; /* Adjust button size */
+    padding: 10px 20px; /* Smaller padding */
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 1.8rem; /* Further reduce title size */
+    font-size: 1.5rem; /* Further reduce title size for very small screens */
   }
 
   .slideshow-container {
-    max-width: 100%;
+    max-width: 95%; /* Further reduce the width for very small screens */
+  }
+
+  .mySlides img {
+    max-height: 250px; /* Limit image height even more */
   }
 
   .prev, .next {
-    font-size: 12px;
-    padding: 6px;
+    font-size: 10px; /* Make arrows smaller */
+    padding: 4px; /* Further reduce padding */
   }
 
   .text {
-    font-size: 0.7rem; /* Even smaller caption for very small screens */
+    font-size: 0.7rem; /* Smaller text for captions */
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px; /* Smaller dots */
+  }
+
+  .back-home-button {
+    font-size: 0.8rem; /* Adjust button font size */
+    padding: 8px 16px; /* Smaller padding for the button */
   }
 }
+
 
 </style>
 </head>
