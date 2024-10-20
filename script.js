@@ -11,6 +11,8 @@ document.querySelectorAll('.menu-item').forEach(item => {
             window.location.href = 'contact.html';  // Example for "Contact" page
         } else if (itemName === 'About Me') {
             window.location.href = 'about.html';  // Navigate to "About Me" page
+        } else if (itemName === 'Archive') {
+            window.location.href = 'archive.html'; // Navigate to Archive page
         }
     });
 });
@@ -94,4 +96,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+let currentSlideIndex = 0; // Start with the first slide (index 0)
 
+// Function to change the slide when navigating (next/prev buttons)
+function changeSlide(n) {
+    showSlide(currentSlideIndex += n);
+}
+
+// Function to display the current slide
+function showSlide(n) {
+    let slides = document.getElementsByClassName("slider-item");
+
+    // Loop back to first or last slide if out of bounds
+    if (n >= slides.length) {
+        currentSlideIndex = 0; // If it's the last slide, go back to the first
+    } else if (n < 0) {
+        currentSlideIndex = slides.length - 1; // If it's the first slide, go to the last
+    }
+
+    // Hide all slides initially
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+
+    // Show the current slide
+    slides[currentSlideIndex].style.display = "block"; 
+}
+
+// Initialize by displaying the first slide on page load
+document.addEventListener("DOMContentLoaded", function () {
+    showSlide(currentSlideIndex); // Display the first slide
+});

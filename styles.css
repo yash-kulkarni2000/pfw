@@ -827,3 +827,104 @@ input:focus, textarea:focus {
 }
 
 
+
+
+
+
+
+
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 60%;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+}
+
+
+
+.photo-slider img {
+    width: 80%; /* Adjust this to a smaller percentage to fit the image */
+    height: auto;
+    max-width: 600px; /* Set a maximum width for the image */
+    max-height: 400px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners to images */
+}
+
+
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 0%; /* Ensures the gallery fits the screen width */
+    overflow: hidden;
+}
+
+
+.photo-slider {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain; /* Keep aspect ratio intact */
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.slides {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider-item.active {
+    display: block;
+}
+
+.slider-item:first-of-type {
+    display: block;
+}
