@@ -8,7 +8,6 @@ Welcome to my portfolio repository! This project showcases my professional journ
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [Contact](#contact)
 
 ---
