@@ -20,6 +20,8 @@ This portfolio is a personal website designed to highlight my skills, showcase m
 
 ## Screenshots
 
+### Home Page
+![Home Page](screenshots/home-page.png)
 
 
 ---
