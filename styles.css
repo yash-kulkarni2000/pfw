@@ -439,18 +439,17 @@ body {
     }
 }
 
-/* Resume Content Layout */
+/* Resume Content Layout
 .resume-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 800px; /* Ensure content doesn't stretch too wide */
-    margin: 20px 0;
+    /* margin: 20px 0;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #00ff00; /* Retro green border */
-}
+    border: 2px solid #00ff00; Retro green border */
 
 .resume-section {
     margin-bottom: 20px;
@@ -513,11 +512,6 @@ body {
 
     .title {
         font-size: 2rem;
-    }
-
-    .resume-content {
-        max-width: 100%;
-        padding: 15px;
     }
 
     .resume-heading {
