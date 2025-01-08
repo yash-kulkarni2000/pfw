@@ -23,6 +23,15 @@ This portfolio is a personal website designed to highlight my skills, showcase m
 ### Home Page
 ![Home Page](screenshots/home-page.png)
 
+### About Me
+![About Me](screenshots/about-me.png)
+
+### Projects
+![Projects](screenshots/projects.png)
+
+### Resume
+![Home Page](screenshots/resume.png)
+
 
 ---
 
