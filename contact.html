@@ -55,6 +55,25 @@
     <title>Contact - Yash's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .socials {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .socials li {
+            margin: 10px 0;
+        }
+        .socials a {
+            text-decoration: none;
+            color: #00ff00; /* Bright green to match your theme */
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .socials a:hover {
+            color: #ff00ff; /* Add a hover effect */
+        }
+    </style>
 </head>
 <body>
     <div class="moon">
@@ -71,17 +90,17 @@
         <h1 class="title">Contact Me</h1>
         <p>Feel free to connect with me on the following platforms:</p>
         
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/yash-kulkarni2000/" target="_blank" class="social-link">
-                <img src="icons/linkedin-icon.png" alt="LinkedIn" class="social-icon"> LinkedIn
-            </a>
-            <a href="https://github.com/yash-kulkarni2000" target="_blank" class="social-link">
-                <img src="icons/github-icon.png" alt="GitHub" class="social-icon"> GitHub
-            </a>
-            <a href="mailto:yashpandharish@vt.edu" class="social-link">
-                <img src="icons/email-icon.png" alt="Email" class="social-icon"> Email
-            </a>
-        </div>
+        <ul class="socials">
+            <li>
+                <a href="https://www.linkedin.com/in/yash-kulkarni-657b971b9/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/yash-kulkarni2000" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <a href="mailto:yashpandharish@vt.edu">Email</a>
+            </li>
+        </ul>
 
         <button class="back-home-button" onclick="window.location.href='index.html'">Back to Home</button>
     </div>
