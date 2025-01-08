@@ -19,7 +19,7 @@ body {
     padding: 20px; /* Adds padding to avoid overflow */
 }
 
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +28,20 @@ body {
     position: relative;
     text-align: center;
     max-width: 90%; /* Prevent overflow by limiting width */
+    /* margin: 0 auto; Center the container */
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    max-width: 90%; /* Prevent overflow by limiting width */
+    height: 100vh; /* Make the container take up the full viewport height */
     margin: 0 auto; /* Center the container */
 }
 
@@ -335,11 +349,12 @@ body {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-template-columns: repeat(3, 1fr); /* Two equal-width columns */
     gap: 20px; /* Spacing between project items */
     justify-items: center; /* Center align the grid items */
     margin-top: 40px;
     padding: 0 20px; /* Padding around the grid for spacing */
+    width: 100%;
 }
 
 .project-item {
@@ -927,4 +942,32 @@ input:focus, textarea:focus {
 
 .slider-item:first-of-type {
     display: block;
+}
+
+
+
+
+/* Mobile view: stack items vertically and make it scrollable */
+@media (max-width: 768px) {
+    .projects-grid {
+        display: flex; /* Switch to flex layout for scrolling */
+        flex-direction: column; /* Stack items vertically */
+        max-height: 70vh; /* Limit height to 70% of viewport */
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-right: 10px;
+    }
+
+    /* Optional scrollbar styling */
+    .projects-grid::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .projects-grid::-webkit-scrollbar-thumb {
+        background-color: #00ff00; /* Bright green scrollbar */
+        border-radius: 10px;
+    }
+
+    .projects-grid::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent scrollbar track */
+    }
 }
