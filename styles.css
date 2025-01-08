@@ -971,3 +971,26 @@ input:focus, textarea:focus {
         background: rgba(0, 0, 0, 0.5); /* Semi-transparent scrollbar track */
     }
 }
+
+/* Mobile view: Make the resume section scrollable */
+@media (max-width: 768px) {
+    .resume-content {
+        max-height: 70vh; /* Limit height to 70% of viewport */
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-right: 10px; /* Add padding for better UX */
+    }
+
+    /* Optional scrollbar styling */
+    .resume-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .resume-content::-webkit-scrollbar-thumb {
+        background-color: #00ff00; /* Bright green scrollbar */
+        border-radius: 10px;
+    }
+
+    .resume-content::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent scrollbar track */
+    }
+}
